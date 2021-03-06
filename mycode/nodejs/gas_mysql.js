@@ -19,7 +19,7 @@ function time_gas()
 function data_gas()
 {
 
-fetchUrl("https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=YourApiKeyToken", function(error, meta, body){
+fetchUrl("https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=A3MXYC2RACK6CAKUN1J1GDFIF78F9QYKKI", function(error, meta, body){
     let call_api = body.toString();
     let obj = JSON.parse(call_api);
     //console.log(call_api );
@@ -35,7 +35,7 @@ let con = mysql.createConnection({
     
 con.connect(function(err) {
     if (err) throw err;
-    console.log("Connected!");
+    console.log("y");
     let sql = `INSERT INTO gas (gas_date, gas_time, low, average, high) VALUES ("${date_gas()}", "${time_gas()}",${obj.result.SafeGasPrice},${obj.result.ProposeGasPrice},${obj.result.FastGasPrice} )`;
     //console.log(sql);
     con.query(sql, function (err, result) {
