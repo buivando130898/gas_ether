@@ -49,4 +49,4 @@ con.connect(function(err) {
 
 }
 
-setInterval(data_gas, 60000);
+setInterval(data_gas, 120000);
