@@ -27,7 +27,7 @@ fetchUrl("https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey
 
 let mysql = require('mysql');
 let con = mysql.createConnection({
-  host: "172.17.0.3",
+  host: "172.17.0.2",
   user: "root",
   password: "ngangongao05",
   database: "update_gas"
@@ -49,4 +49,4 @@ con.connect(function(err) {
 
 }
 
-setInterval(data_gas, 120000);
+setInterval(data_gas, 180000);
